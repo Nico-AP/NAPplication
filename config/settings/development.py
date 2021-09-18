@@ -1,6 +1,5 @@
 from .common import *
 
-ALLOWED_HOSTS = []
 
 # DEBUG CONFIGURATION
 # ------------------------------------------------------------------------------
