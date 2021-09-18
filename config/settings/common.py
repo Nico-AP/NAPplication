@@ -1,6 +1,8 @@
 """
 Django settings for nap_site project.
 """
+import json
+
 from os import environ
 from dotenv import load_dotenv
 from pathlib import Path
@@ -22,6 +24,14 @@ MEDIA_ROOT = PROJECT_ROOT / 'media/'
 # SECRET KEY
 # ------------------------------------------------------------------------------
 SECRET_KEY = environ['DJANGO_SECRET']
+
+
+# SECRET KEY
+# ------------------------------------------------------------------------------
+if 'ALLOWED_HOSTS' in environ:
+    ALLOWED_HOSTS = json.loads(environ['ALLOWED_HOSTS'])
+else:
+    ALLOWED_HOSTS = []
 
 
 # APPLICATION CONFIGURATION
