@@ -1,6 +1,5 @@
 # virtual environments
 venv/
-media/
 
 # environment variables
 .env
@@ -15,6 +14,8 @@ logs
 
 # collected static file directory
 staticfiles/
+static/
+media/
 
 # Pycharm
 .idea/*
