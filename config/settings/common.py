@@ -12,13 +12,13 @@ load_dotenv()
 
 # PATH CONFIGURATION
 # ------------------------------------------------------------------------------
-DJANGO_ROOT = Path(__file__).resolve().parent.parent
+DJANGO_ROOT = Path(__file__).resolve().parent.parent.parent
 PROJECT_ROOT = DJANGO_ROOT.parent
 
-SITE_NAME = PROJECT_ROOT.name
+SITE_NAME = DJANGO_ROOT.name
 
-STATIC_ROOT = PROJECT_ROOT / 'static/'
-MEDIA_ROOT = PROJECT_ROOT / 'media/'
+STATIC_ROOT = DJANGO_ROOT / 'static/'
+MEDIA_ROOT = DJANGO_ROOT / 'media/'
 
 
 # SECRET KEY
