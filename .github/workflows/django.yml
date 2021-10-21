@@ -40,4 +40,10 @@ jobs:
         DJANGO_DB_PW: ${{ secrets.DJANGO_DB_PW }}
       run: python manage.py migrate
     - name: Run Tests
+      env:
+        DJANGO_SECRET: ${{ secrets.DJANGO_SECRET }}
+        DJANGO_SETTINGS_MODULE: ${{ secrets.DJANGO_SETTINGS_MODULE }}
+        DJANGO_DB_NAME: ${{ secrets.DJANGO_DB_NAME }}
+        DJANGO_DB_USER: ${{ secrets.DJANGO_DB_USER }}
+        DJANGO_DB_PW: ${{ secrets.DJANGO_DB_PW }}
       run: python manage.py test
