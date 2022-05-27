@@ -14,7 +14,6 @@ logs
 
 # collected static file directory
 staticfiles/
-static/
 media/
 
 # Pycharm
